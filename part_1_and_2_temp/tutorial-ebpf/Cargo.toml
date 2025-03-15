@@ -1,0 +1,17 @@
+[package]
+name = "tutorial-ebpf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tutorial-common = { path = "../tutorial-common" }
+
+aya-ebpf = { workspace = true }
+aya-log-ebpf = { workspace = true }
+
+[build-dependencies]
+which = { workspace = true }
+
+[[bin]]
+name = "tutorial"
+path = "src/main.rs"
