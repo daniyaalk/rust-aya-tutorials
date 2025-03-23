@@ -1,0 +1,18 @@
+[package]
+name = "openssl-bpf-ebpf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+openssl-bpf-common = { path = "../openssl-bpf-common" }
+
+aya-ebpf = { workspace = true }
+aya-log-ebpf = { workspace = true }
+log = "0.4.26"
+
+[build-dependencies]
+which = { workspace = true }
+
+[[bin]]
+name = "openssl-bpf"
+path = "src/main.rs"
